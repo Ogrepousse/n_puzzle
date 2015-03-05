@@ -64,7 +64,16 @@ def	gen_end(tab, size, start):
 	gen_end(tab[1:-1, 1:-1], size - 2, id)
 
 
-
+def nilsson_heuristic(n, size, end):
+	for i in range(size * size - 1):
+		x1, y1 = np.where(n.board == i)
+		x = x1[0]
+		y = y1[0]
+		x2, y2 = np.where(end == i)
+		n.score += np.abs(x1[0] - x2[0]) + np.abs(y1[0] - y2[0])
+		if (x == (size - 1) / 2 && y == size / 2)
+			n.score += 3
+		elif 
 
 size = 3
 poss = math.factorial(size * size)
