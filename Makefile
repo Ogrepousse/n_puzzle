@@ -6,7 +6,7 @@
 #    By: esusseli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/13 16:29:03 by esusseli          #+#    #+#              #
-#    Updated: 2018/01/02 15:58:08 by esusseli         ###   ########.fr        #
+#    Updated: 2018/02/12 12:32:29 by esusseli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = n_puzzle
 CXXFLAGS = -Wall -Wextra -Werror -g3
 LDLIBS = -lft
 LIBDIR = libft
-SRCS = main.c
+SRCS = main.c gen_solution.c
 INCS = n_puzzle.h
 SRCDIR = src
 INCDIR = include

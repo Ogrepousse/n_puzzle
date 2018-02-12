@@ -6,7 +6,7 @@
 /*   By: esusseli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/02 15:56:14 by esusseli          #+#    #+#             */
-/*   Updated: 2018/01/02 17:52:41 by esusseli         ###   ########.fr       */
+/*   Updated: 2018/02/12 12:31:50 by esusseli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,8 @@ typedef struct	s_env
 	int			**res;
 
 }				t_env;
+
+void			gen_solution(t_env *e);
+void			print_tab(int s, int **tab);
 
 #endif
