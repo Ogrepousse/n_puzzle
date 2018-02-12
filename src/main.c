@@ -6,7 +6,7 @@
 /*   By: esusseli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/02 15:58:18 by esusseli          #+#    #+#             */
-/*   Updated: 2018/01/02 17:52:30 by esusseli         ###   ########.fr       */
+/*   Updated: 2018/02/12 12:03:31 by esusseli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,46 @@ void	print_tab(int s, int **tab)
 		}
 		printf("\n");
 		i++;
+	}
+}
+
+void	spiral(t_env *e)
+{
+	int		i;
+	int		j;
+	int		xdir;
+	int		ydir;
+	int		nb;
+
+	i = 0;
+	j = 0;
+	nb = 1;
+	xdir = 1;
+	ydir = 0;
+	while (nb < e->N * e->N)
+	{
+		e->res[j][i] = nb++;
+		if (xdir)
+		{
+			if ((i + xdir < e->N && i + xdir >= 0) && e->res[j][i + xdir] == 0)
+				i += xdir;
+			else
+			{
+				ydir = xdir;
+				xdir = 0;
+			}
+		}
+		if (ydir)
+		{
+			if ((j + ydir < e->N && j + ydir >= 0) && e->res[j + ydir][i] == 0)
+				j += ydir;
+			else
+			{
+				xdir = -ydir;
+				ydir = 0;
+				i += xdir;
+			}
+		}
 	}
 }
 
@@ -56,6 +96,7 @@ void	gen_solution(t_env *e)
 		}
 		i++;
 	}
+	spiral(e);
 	print_tab(e->N, e->res);
 }
 
