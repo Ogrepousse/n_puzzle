@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   heuristic.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esusseli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/02 15:58:18 by esusseli          #+#    #+#             */
-/*   Updated: 2018/02/15 11:35:54 by esusseli         ###   ########.fr       */
+/*   Created: 2018/02/15 11:22:16 by esusseli          #+#    #+#             */
+/*   Updated: 2018/02/15 11:48:19 by esusseli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "n_puzzle.h"
 
-int		main(int ac, char **av)
+int		manhattan(t_node *node, int	size)
 {
-	t_env	e;
-	t_node	*test;
+	int		i;
+	int		j;
+	int		weight;
 
-	(void)ac;
-	(void)av;
-	
-	if (ac > 1)
-		e.N = ft_atoi(av[1]);
-	else
-		e.N = 3;
-	gen_solution(&e);
-	printf("lol\n");
-	test = create_node();
-	printf("hihi %d\n", test->cost);
+	(void)node;
+	i = 0;
+	weight = 0;
+	while (i < size)
+	{
+		j = 0;
+		while (j < size)
+		{
+			if 
+			j++;
+		}
+		i++;
+	}
 	return (0);
 }

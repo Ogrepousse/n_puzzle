@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   tree.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esusseli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/02 15:58:18 by esusseli          #+#    #+#             */
-/*   Updated: 2018/02/15 11:35:54 by esusseli         ###   ########.fr       */
+/*   Created: 2018/02/15 11:00:30 by esusseli          #+#    #+#             */
+/*   Updated: 2018/02/15 11:20:49 by esusseli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "n_puzzle.h"
 
-int		main(int ac, char **av)
+//probly static
+t_node*	create_node(void)
 {
-	t_env	e;
-	t_node	*test;
+	t_node	*node;
 
-	(void)ac;
-	(void)av;
-	
-	if (ac > 1)
-		e.N = ft_atoi(av[1]);
-	else
-		e.N = 3;
-	gen_solution(&e);
-	printf("lol\n");
-	test = create_node();
-	printf("hihi %d\n", test->cost);
-	return (0);
+	node = (t_node*)malloc(sizeof(t_node));
+	ft_memset(node, 0, sizeof(*node));
+	return(node);
 }
+
+
