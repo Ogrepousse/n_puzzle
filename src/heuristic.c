@@ -21,12 +21,13 @@ int		manhattan(t_node *node, int	size)
 	(void)node;
 	i = 0;
 	weight = 0;
+	(void)weight;
 	while (i < size)
 	{
 		j = 0;
 		while (j < size)
 		{
-			if 
+		//	if 
 			j++;
 		}
 		i++;
